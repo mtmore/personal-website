@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="../css/styles.css">
+    <title>About Me | portfolio-website</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* استایل‌های مشترک */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+        
+        nav {
+            margin-bottom: 20px;
+        }
+        
+        header a {
+            color: #00f3ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+            text-shadow: 0 0 5px #00f3ff;
+            padding: 10px 20px;
+            border: 1px solid #00f3ff;
+            border-radius: 5px;
+        }
+        
+        header a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            border-color: #ff00ff;
+            background: rgba(255, 0, 255, 0.1);
+        }
+        
+        h1 {
+            color: #00f3ff;
+            text-shadow: 0 0 10px #00f3ff;
+            margin: 20px 0;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .section {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #1a1a2e, #0a0a0a);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #00f3ff;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            color: #00f3ff;
+            text-shadow: 0 0 5px #00f3ff;
+        }
+        
+        /* استایل‌های خاص صفحه About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .profile-image-container {
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00f3ff;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .about-text {
+            padding: 20px;
+        }
+        
+        .about-text h2 {
+            color: #00f3ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #00f3ff;
+        }
+        
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* استایل برای موبایل */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html/index.html">Home</a>
+            <a href="../about.html/about.html">About me</a>
+            <a href="../skills.html/skills.html">Skills</a>
+            <a href="../projects.html/projects.html">Projects</a>
+            <a href="../contact.html/contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="section">
+            <div class="about-content">
+                <div class="profile-image-container">
+                    <img src="../images/profile.jpg/IMG_20250925_141445.jpg" alt="Profile Picture" class="profile-image">
+                </div>
+                
+                <div class="about-text">
+                    <h2>My Story</h2>
+                    <p>Hi! I'm a backend developer focused on Python, currently learning Django. Passionate about problem solving, continuous learning, and contributing to real-world projects.</p>
+                    
+                    <p>I am also familiar with agile methodologies such as Scrum and Kanban, and I consider learning about project management an essential part of my professional growth.</p>
+                    
+                    <p>I believe in writing clean, maintainable code and always strive to improve my skills while working on challenging projects that make a difference.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="../css/styles.css">
+    <title>Projects | Portfolio</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* استایل‌های پایه */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        /* هدر */
+        header {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00f3ff;
+        }
+        
+        nav {
+            margin-bottom: 25px;
+        }
+        
+        header a {
+            color: #00f3ff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+            padding: 8px 16px;
+            border: 1px solid #00f3ff;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        header a:hover {
+            color: #ff00ff;
+            border-color: #ff00ff;
+            background: rgba(255, 0, 255, 0.1);
+        }
+        
+        h1 {
+            color: #00f3ff;
+            margin: 15px 0;
+            font-size: 2.2em;
+        }
+        
+        /* محتوای اصلی */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        /* بخش عنوان صفحه */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-title {
+            color: #00f3ff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .page-subtitle {
+            color: #ff00ff;
+            font-size: 1.2em;
+        }
+        
+        /* کانتینر پروژه‌ها */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        /* کارت پروژه */
+        .project-card {
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid #00f3ff;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff00ff;
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.3);
+        }
+        
+        .project-title {
+            color: #00f3ff;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff00ff;
+            padding-bottom: 10px;
+        }
+        
+        .project-description {
+            flex-grow: 1;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+        
+        /* تگ‌های تکنولوژی */
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background: rgba(0, 243, 255, 0.1);
+            color: #00f3ff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid #00f3ff;
+        }
+        
+        /* لینک گیت‌هاب */
+        .project-links {
+            margin-top: auto;
+        }
+        
+        .github-link {
+            display: inline-block;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid #555;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .github-link:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+        
+        /* فوتر */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e, #0a0a0a);
+            padding: 25px;
+            text-align: center;
+            border-top: 2px solid #00f3ff;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            color: #00f3ff;
+            font-size: 0.9em;
+        }
+        
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 25px 20px;
+            }
+            
+            header {
+                padding: 15px;
+            }
+            
+            header a {
+                display: inline-block;
+                margin: 5px;
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            
+            .page-title {
+                font-size: 2em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                padding: 20px 15px;
+            }
+            
+            header a {
+                display: block;
+                margin: 8px auto;
+                width: 90%;
+                max-width: 200px;
+            }
+            
+            .project-title {
+                font-size: 1.4em;
+            }
+            
+            .project-tech {
+                gap: 8px;
+            }
+            
+            .tech-tag {
+                font-size: 0.8em;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html/index.html">Home</a>
+            <a href="../about.html/about.html">About me</a>
+            <a href="../skills.html/skills.html">Skills</a>
+            <a href="../projects.html/projects.html">Projects</a>
+            <a href="../contact.html/contact.html">Contact</a>
+        </nav>
+        <h1></h1>
+    </header>
+    
+    <main>
+        <div class="page-header">
+            <h2 class="page-title">Python projects</h2>
+            <p class="page-subtitle"></p>
+        </div>
+        
+        <div class="projects-container">
+            <!-- پروژه اول: Store -->
+            <div class="project-card">
+                <h3 class="project-title">Mini Store</h3>
+                
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Object-Oriented Programming</span>
+                    <span class="tech-tag">File Handling</span>
+                    <span class="tech-tag">Data Management</span>
+                </div>
+                
+                <p class="project-description">
+                    A complete store management system with object-oriented architecture. This project includes Product, Customer, Order and Inventory classes. Main capabilities: product management, order entry, inventory tracking, sales report generation and customer management.
+                </p>
+                
+                <div class="project-links">
+                    <a href="https://github.com/mtmore/my-second-repo" class="github-link" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- پروژه دوم: Password Strength Checker -->
+            <div class="project-card">
+                <h3 class="project-title"> Password Strength Checker</h3>
+                
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Security</span>
+                    <span class="tech-tag">Algorithm</span>
+                    <span class="tech-tag">Validation</span>
+                </div>
+                
+                <p class="project-description">
+                    A smart tool for analyzing and assessing password security. The project examines various criteria, including password length, use of uppercase and lowercase letters, numbers, special characters, and common patterns, and provides a security score.
+                </p>
+                
+                <div class="project-links">
+                    <a href="https://github.com/mtmore/my-first-repo" class="github-link" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
